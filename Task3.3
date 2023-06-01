@@ -1,0 +1,31 @@
+WALK THROUGH WITH COLLISION
+
+1. The function ‘hashing_method(value, memory)’ is called with the key “dog” as the ‘value_to_hash’ parameter and the ‘memory’ list (currently all None values).
+
+2. The sum of ASCII codes for the key "dog" is calculated:
+
+   d: 100
+   o: 111
+   g: 103
+
+   The sum is ‘314’.
+
+3. The hash index is calculated using the modulo operation: `index_val = int(hashed_value % 30)`. For our example, this results in 'index_val = 314 % 30 = 4’.
+
+4. The program checks if the memory slot at ‘index_val’ (which is 4) is empty and stores the key “dog” in memory[4].
+
+5. The function then handles the key “dgo”. The same process occurs as in steps 1-3, and it calculates the sum of the ASCII codes for “dgo” as follows:
+
+   - d: 100
+   - g: 103
+   - o: 111
+
+   The sum is ‘100 + 103 + 111 = 314’.
+
+6. Just like before, the hash index is calculated: ‘index_val = int(hashed_value % 30)’. For the key “dgo”, this also results in ‘index_val = 314 % 30 = 4’.
+
+7. Now, the program has a hash collision: both keys “dog” and “dgo” have the same index value (4).
+
+8. When the function checks if the memory slot at ‘index_val' (4) is empty, it finds out that it's not:
+
+9. Since the memory slot at index 4 is not empty (it contains the key “dog”), the program raises the ‘IndexAlreadyTaken' exception, displaying “Your index 4 is already taken.”
