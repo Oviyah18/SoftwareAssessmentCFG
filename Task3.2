@@ -1,0 +1,19 @@
+WALK THROUGH WITHOUT COLLISION
+
+1. The function ‘hashing_method(value, memory)’ is called with the key “dog” as the ‘value_to_hash’ parameter and the ‘memory’ list.
+
+2. A variable ‘hashed_value’ is initialized with the value 0.
+
+3. The ‘for’ loop iterates through each character of the ‘value_to_hash’ (“dog”). It computes the sum of ASCII codes for “d”, “o”, and “g”. The ASCII codes are:
+
+   d: 100
+   o: 111
+   g: 103
+
+   The sum of these ASCII codes is ‘100 + 111 + 103 = 314’.
+
+4. The hash index is calculated using the modulo operation: ‘index_val = int(hashed_value % 30)'. For our example, this results in ‘index_val = 314 % 30 = 4’.
+
+5. The program checks if the memory slot at ‘index_val’ (which is 4) is empty
+
+6. The function prints the calculated index (4) and the current state of memory
